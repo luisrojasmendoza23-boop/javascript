@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagenes/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Calculadora de Propinas</title>
+</head>
+<body>
+
+<main>
+    <div class="contenedor-logo">
+        <img src="Imagenes/logo.svg" alt="logo" class="SPLITTER">
+    </div>
+
+    <div class="tarjeta">
+        <section class="entradas">
+
+            <div class="campo">
+                <h2>Cuenta</h2>
+                <div class="input-icono">
+                    <img src="Imagenes/icon-dollar.svg" alt="dolares">
+                    <input type="number" id="entrada-cuenta" placeholder="0" autocomplete="off" step="0.01">
+                </div>
+            </div>
+
+            <div class="propina">
+                <h2>Seleccionar % de Propina</h2>
+                <div class="opciones-propina">
+                    <button class="opcion-propina" data-valor="5">5%</button>
+                    <button class="opcion-propina" data-valor="10">10%</button>
+                    <button class="opcion-propina" data-valor="15">15%</button>
+                    <button class="opcion-propina" data-valor="25">25%</button>
+                    <button class="opcion-propina" data-valor="50">50%</button>
+                    <input type="number" id="propina-personalizada" placeholder="Otro" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="personas">
+                <div class="etiqueta-error">
+                    <h2>Número de Personas</h2>
+                    <span id="mensaje-error">No puede ser cero</span>
+                </div>
+                <div class="input-icono" id="contenedor-personas">
+                    <img src="Imagenes/icon-person.svg" alt="persona">
+                    <input type="number" id="entrada-personas" placeholder="0" autocomplete="off">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="resultado">
+            <div class="datos">
+                <div class="linea">
+                    <div>
+                        <h3>Propina</h3>
+                        <p>/ persona</p>
+                    </div>
+                    <p class="valor">$<span id="monto-propina">0.00</span></p>
+                </div>
+
+                <div class="linea">
+                    <div>
+                        <h3>Total</h3>
+                        <p>/ persona</p>
+                    </div>
+                    <p class="valor">$<span id="monto-total">0.00</span></p>
+                </div>
+            </div>
+
+            <button class="reinicio" id="boton-reinicio" disabled>REINICIAR</button>
+        </section>
+    </div>
+</main>
+
+<script src="js/index.js"></script>
+</body>
+</html>
